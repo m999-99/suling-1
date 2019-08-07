@@ -19,7 +19,7 @@ App({
             'content-type': 'json'
           },
           success: function (res1) {
-             var openid = res.data.openid //返回openid
+            // var openid = res.data.openid //返回openid
             // console.log('openid为' + openid);
             // console.log('sessionkey' + res.data.session_key)
             wx.setStorage({
