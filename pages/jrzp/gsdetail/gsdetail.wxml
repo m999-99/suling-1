@@ -1,68 +1,66 @@
 <!--pages/jrzp/gsdetail/gsdetail.wxml-->
 <view class="gscontainer">
- <view class="gsbanner">
-  <swiper indicator-dots="true" autoplay="true" interval="5000" duration="1000" style="height:350rpx;">
-  <block wx:for="{{banner}}" wx:key="">
-    <swiper-item>
-      <image src="{{item}}" class="swiper-image" bindtap="showGoods" mode="widthFit" style="width:100%;height:350rpx"/>
-    </swiper-item>
-  </block>
-</swiper>
- </view>
+  <view class="gsbanner">
+    <swiper indicator-dots="true" autoplay="true" interval="5000" duration="1000" style="height:350rpx;">
+      <block wx:for="{{banner}}" wx:key="">
+        <swiper-item>
+          <image src="{{item}}" class="swiper-image" bindtap="showGoods" mode="widthFit" style="width:100%;height:350rpx" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
 
-       <!-- 公司信息 -->
- <text class="gstitle">{{name}}</text>
-<view class="gs-content">
-<view class="gs-content-t">
-<view class="gs-content-tl">招聘岗位：</view>
-<view class="gs-content-tc">普工</view>
-</view>
-<view class="gs-content-t">
-<view class="gs-content-tl">企业负责人：</view>
-<view class="gs-content-tc">{{contactPeople}}</view>
-</view>
-<view class="gs-content-t3">
-<view class="gs-content-tl">联系电话：</view>
-<view class="gs-content-tc">{{phone}}</view>
-</view>
+  <!-- 公司信息 -->
+  <text class="gstitle">{{etprz.name}}</text>
+  <view class="gs-content">
+    <view class="gs-content-t">
+      <view class="gs-content-tl">招聘岗位：</view>
+      <view class="gs-content-tc">普工</view>
+    </view>
+    <view class="gs-content-t">
+      <view class="gs-content-tl">负责人：</view>
+      <view class="gs-content-tc">{{etprz.contactPeople}}</view>
+    </view>
+    <view class="gs-content-t">
+      <view class="gs-content-tl">联系电话：</view>
+      <view class="gs-content-tc">{{etprz.contactPhone}}</view>
+    </view>
 
-<view class="caption-wrap">
-    
-    <i-collapse name="{{name1}}">
+    <view class="caption-wrap">
+
+      <i-collapse name="{{name1}}">
         <i-collapse-item title="任职要求" name="name1">
-            <view slot="content"class="rzyq">
-               {{requirement}}
-            </view>
+          <view slot="content" class="rzyq">
+            {{etprz.requirement}}
+          </view>
         </i-collapse-item>
         <i-collapse-item title="薪资待遇" name="name2">
-            <view slot="content" i-class-content="green-text" class="xzdy"> 
-                {{salary}}
-            </view>
+          <view slot="content" i-class-content="green-text" class="xzdy">
+            {{etprz.salary}}
+          </view>
         </i-collapse-item>
         <i-collapse-item title="公司地址" name="name3">
-            <view slot="content" class="gsdz">
-               {{addres}}
-            </view>
+          <view slot="content" class="gsdz">
+            {{etprz.address}}
+          </view>
         </i-collapse-item>
-         <i-collapse-item title="企业简介" name="name4">
-            <view slot="content" class="qyjj">
-              {{introduction}}
-            </view>
+        <i-collapse-item title="企业简介" name="name4">
+          <view slot="content" class="qyjj">
+            {{etprz.introduction}}
+          </view>
         </i-collapse-item>
-        
+
         <i-collapse-item title="集合通知" name="name5">
-            <view slot="content" class="jhtz">
-             {{jhtz}}
-            </view>
+          <view slot="content" class="jhtz">
+            {{etprz.interviewAddress}}
+          </view>
         </i-collapse-item>
-    </i-collapse>
+      </i-collapse>
+    </view>
+  </view>
+  <!-- 底部链接 -->
+  <view class="gsbottom">
+    <i-button catchtap="handlevideo" type="success" class="success-button">招聘直播</i-button>
+    <i-button catchtap="handleface" type="warning" class="warning-button">面试报名</i-button>
+  </view>
 </view>
-</view>
-            <!-- 底部链接 -->
-<view class="gsbottom">
-<i-button catchtap="handlevideo" type="success" class="success-button">招聘直播</i-button>
-<i-button catchtap="handleface" type="warning"  class="warning-button">面试报名</i-button>
-</view>
-</view>
-
-

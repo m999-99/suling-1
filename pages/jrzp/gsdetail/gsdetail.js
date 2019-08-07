@@ -1,5 +1,7 @@
 // pages/jrzp/gsdetail/gsdetail.js
-var newsData = require("../../data/newsdata.js");
+//var newsData = require("../../data/newsdata.js");
+var app = getApp()
+
 Page({
 
   /**
@@ -8,8 +10,8 @@ Page({
   data: {
     char_lt: ">",
     banner: ["http://m.qpic.cn/psb?/V13Cv6dH1DBP2N/urWqqHAaxru5d7oIcAZyHPb0iQgodIsxkWnDtBUfj1Q!/b/dE0BAAAAAAAA&bo=IAMsAQAAAAARBz4!&rf=viewer_4", "http://m.qpic.cn/psb?/V13Cv6dH1DBP2N/el7r8l11ekGE5B7cVvhYRU0XGajvACkJoDaTNWryC7U!/b/dL8AAAAAAAAA&bo=IAMsAQAAAAARFy4!&rf=viewer_4", "http://m.qpic.cn/psb?/V13Cv6dH1DBP2N/8ijR1ZEFDq7G2sVoLwOZ7qmnvTFkIAYX1VFIQG.mpJo!/b/dLgAAAAAAAAA&bo=IAMsAQAAAAARFy4!&rf=viewer_4"],
-    name1: 'name1'
-    
+    name1: 'name1',
+    etprz:[]
     
   },
 
@@ -27,9 +29,32 @@ Page({
     })
   },
   onLoad: function (options) {
-    //console.log(options.etprzid)
+    console.log(options.etprzid)
     var that=this;
-    that.setData(newsData.initData[options.etprzid])
+   // that.setData(useData[options.etprzid])
+    var useData = app.globalData;
+    wx.request({
+      url: "https://192.168.1.123:8443/easyjob/entprz/getentprzbyid",
+      data: { "etprzid": options.etprzid },
+      method: 'GET',
+      success: function (res) {
+        var etprz = res.data.etprz;
+        if (etprz == undefined) {
+          var toastText = '获取数据失败' + res.data.errMsg;
+          wx.showToast({
+            title: toastText,
+            icon: '',
+            duration: 2000
+          });
+        } else {
+          that.setData({
+            // areaName: area.areaName,
+            // priority: area.priority
+            etprz: etprz
+          });
+        }
+      }
+    })
   },
  
 

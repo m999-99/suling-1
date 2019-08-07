@@ -54,7 +54,11 @@
         <ul>
           <block wx:for="{{useData}}" wx:for-item="item" wx:key="key">
             <view catchtap="goGsdetail" data-etprzid="{{item.etprzid}}">
-              <template is="jrzpTemplate" data="{{...item}}" />
+              <!-- <li>
+                <image class="jrzp-image" src="{{item.iconurl}}"></image>
+                <text class="jrzp-text">{{item.shortName}}</text>
+              </li> -->
+                <template is="jrzpTemplate" data="{{...item}}" />
             </view>
 
           </block>
@@ -63,7 +67,7 @@
       </view>
     </view>
   </swiper-item>
-  <swiper-item>
+  <!-- <swiper-item>
     <view class="jrzp-gc">
       <view class="jrzp-g-nr">
 
@@ -78,9 +82,9 @@
 
       </view>
     </view>
-  </swiper-item>
+  </swiper-item> -->
 
-  <swiper-item>
+  <!-- <swiper-item>
     <view class="jrzp-gc">
       <view class="jrzp-g-nr">
 
@@ -95,13 +99,13 @@
 
       </view>
     </view>
-  </swiper-item>
-  </swiper>
-  <!-- 直播间页面导航 -->
-  <view class="jrzp-zbj">
-    <view class="jrzp-button" catchtap="goVideo">
-      <image class="jrzp-img" src="/images/yizhi/job/兼职@2x.png"></image>
+  </swiper-item> -->
+</swiper>
+<!-- 直播间页面导航 -->
+<view class="jrzp-zbj">
+  <view class="jrzp-button" catchtap="goVideo">
+    <image class="jrzp-img" src="/images/yizhi/job/兼职@2x.png"></image>
 
-      <text class="jrzp-text1">招聘直播间</text>
-    </view>
+    <text class="jrzp-text1">招聘直播间</text>
   </view>
+</view>

@@ -1,4 +1,4 @@
-pages/jrzp/jrzp-template/jrzp-template.js
+//pages/jrzp/jrzp-template/jrzp-template.js
 Page({
 
   /**

@@ -1,6 +1,6 @@
 <template name="jrzpTemplate">
   <li>
-    <image class="jrzp-image" src="{{gsicon}}"></image>
+    <image class="jrzp-image" src="{{iconurl}}"></image>
     <text class="jrzp-text">{{shortName}}</text>
   </li>
 

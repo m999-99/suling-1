@@ -1,7 +1,7 @@
 // pages/jrzp/jrzp.js
 //引入data文件夹中的js数据
 var app = getApp()
- var newsData=require("../../data/newsdata.js");
+ //var newsData=require("../../data/newsdata.js");
 
 
 Page({
@@ -24,7 +24,7 @@ Page({
   goGsdetail:function(event) {
     console.log(event);
     wx.navigateTo({
-      url: '../../jrzp/gsdetail/gsdetail?etprzid=' + event.currentTarget.dataset.etprzid
+    url: '../../jrzp/gsdetail/gsdetail?etprzid=' + event.currentTarget.dataset.etprzid
     })
   },
   goVideo: function () {
@@ -57,24 +57,24 @@ Page({
    */
   onLoad:function(options) {
     var that=this;
-    
-    that.setData({
-      useData:newsData.initData
-    })
-//     wx.request({
-//   url: 'https://192.168.1.123:8443/easyjob/entprz/listentprz',
-//   method:'GET',
-//   success(res){
+    var useData = app.globalData.useData;
+    // that.setData({
+    //   useData:newsData.initData
+    // })
+    wx.request({
+  url: 'https://192.168.1.123:8443/easyjob/entprz/listentprz',
+  method:'GET',
+  success(res){
   
-//     console.log("resdata:"+res.data)
-//       that.setData({
-//         useData: res.data
-//       })
+    console.log("resdata:"+res.data)
+      that.setData({
+        useData: res.data
+      })
       
       
    
-//   }
-//  })
+  }
+ })
     wx.getSystemInfo({
 
       success: function (res) {
