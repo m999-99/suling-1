@@ -50,7 +50,6 @@ Page({
       url: '../search/search',
     })
   },
-
   onLoad: function (options) {
     
     var that = this;
