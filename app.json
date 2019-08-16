@@ -17,9 +17,11 @@
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#062f8e",
-    "navigationBarTitleText": "易职招聘",
-    "navigationBarTextStyle": "white"
-    
+
+    "navigationBarTitleText": "苏领",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+
   },
   "debug":true,
   "permission": {

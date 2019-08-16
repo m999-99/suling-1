@@ -1,13 +1,25 @@
 <import src="../../model/model.wxml" />
-  <view class="firstTitle">
+
+ 
+ <view class="firstTitle">
   < view bindtap="loadLocation"class="firstImage">
     <image class="icon_img" src="../../images/yizhi/index/address@2x.png" />
     </view>
 
     < view bindtap="translate" class="firstAddress">
 
+<i-row i-class="irowindex1">
+  < i-col span="2" i-class="col-class" bindtap="loadLocation">
+    <!-- <image class="icon_img" src="../../images/yizhi/index/address@2x.png" /> -->
+   <i-icon type="coordinates" size="26" color="#80848f" />
+   
+    </i-col>
+
+    < i-col span="10" i-class="col-class" bindtap="translate">
+
       <text >{{city}}{{county}}</text>
       </view>
+
 
       <view class="firstSearch">
      <view class='searchBorder'>
@@ -15,6 +27,11 @@
   		 placeholder='{{bsshow}}'
          bindinput='bindinput' 
          bindconfirm='confirm'/>
+
+      < i-col span="12" i-class="col-class">
+        <view class='search'>
+  <input type='text'  placeholder='{{bsshow}}' bindinput='bindinput'  bindconfirm='confirm'/>
+
   <icon type='search' class='icons'></icon>
 </view>   
         </view>

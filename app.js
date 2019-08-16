@@ -7,19 +7,26 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-
+   // var baseUrl=app.getGolobleData.baseUrl;
     // 登录
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         wx.request({
-          url: 'https://192.168.1.107:8443/easyjob/wxlogin?code=' + res.code,
+
+          url: this.globalData.baseUrl+'/wxlogin?code=' + res.code,
+
           data: {},
           header: {
             'content-type': 'json'
           },
           success: function (res1) {
             // var openid = res.data.openid //返回openid
+
+          // 1 var openid = res.data.openid //返回openid
+
+             // 2var openid = res.data.openid //返回openid
+
             // console.log('openid为' + openid);
             // console.log('sessionkey' + res.data.session_key)
             wx.setStorage({
@@ -56,8 +63,8 @@ App({
   globalData: {
     userInfo: null,
     isAuth: true,
-    useData:[]
-
+    useData:[],
+    baseUrl:"http://je2d96.natappfree.cc/easyjob"
   },
 
 })
