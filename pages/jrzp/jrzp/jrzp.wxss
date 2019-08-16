@@ -37,6 +37,15 @@ page {
   background-color: #ededed;
   text-align: center;
 }
+.tui-picker-detail{
+  height: 100rpx;
+  line-height:100rpx;
+  margin: 0 auto;
+  background-color: #ededed;
+  font-size:28rpx;
+  padding: 0 10px;
+  overflow: hidden;
+}
 
 .swiper-tab {
   width: 100%;

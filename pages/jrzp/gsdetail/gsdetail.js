@@ -11,6 +11,7 @@ Page({
     char_lt: ">",
     banner: ["http://m.qpic.cn/psb?/V13Cv6dH1DBP2N/urWqqHAaxru5d7oIcAZyHPb0iQgodIsxkWnDtBUfj1Q!/b/dE0BAAAAAAAA&bo=IAMsAQAAAAARBz4!&rf=viewer_4", "http://m.qpic.cn/psb?/V13Cv6dH1DBP2N/el7r8l11ekGE5B7cVvhYRU0XGajvACkJoDaTNWryC7U!/b/dL8AAAAAAAAA&bo=IAMsAQAAAAARFy4!&rf=viewer_4", "http://m.qpic.cn/psb?/V13Cv6dH1DBP2N/8ijR1ZEFDq7G2sVoLwOZ7qmnvTFkIAYX1VFIQG.mpJo!/b/dLgAAAAAAAAA&bo=IAMsAQAAAAARFy4!&rf=viewer_4"],
     name1: 'name1',
+    
     etprz:[]
     
   },
@@ -21,6 +22,13 @@ Page({
   handleface:function(){
     wx.navigateTo({
       url: '../../jrzp/gspeople/gspeople',
+    })
+  },
+  makePhone:function(e){
+    wx.makePhoneCall({
+
+      phoneNumber: 'etprz.contactPhone',
+
     })
   },
   handlevideo:function(){
@@ -34,7 +42,7 @@ Page({
    // that.setData(useData[options.etprzid])
     var useData = app.globalData;
     wx.request({
-      url: "https://192.168.1.123:8443/easyjob/entprz/getentprzbyid",
+      url: "https://192.168.1.107:8443/easyjob/entprz/getentprzbyid",
       data: { "etprzid": options.etprzid },
       method: 'GET',
       success: function (res) {

@@ -7,16 +7,18 @@
       <view class="swiper-tab">
         <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">全职</view>
         <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">兼职</view>
-        <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">大龄</view>
+        <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">小时工</view>
 
       </view>
-      <!-- <text class="">全职</text>
-        <text>兼职</text>
-        <text>大龄工种</text> -->
+      
     </view>
     <view class="jrzp-headContainer-r">
-      <text>苏州</text>
-      <text>工业园区</text>
+     
+      <picker bindchange="changeRegin" mode = "region" value="{{region}}">
+    <view class="tui-picker-detail"> {{region[1]}} - {{region[2]}}</view>
+  </picker>
+
+    
 
     </view>
   </view>
@@ -54,10 +56,7 @@
         <ul>
           <block wx:for="{{useData}}" wx:for-item="item" wx:key="key">
             <view catchtap="goGsdetail" data-etprzid="{{item.etprzid}}">
-              <!-- <li>
-                <image class="jrzp-image" src="{{item.iconurl}}"></image>
-                <text class="jrzp-text">{{item.shortName}}</text>
-              </li> -->
+              
                 <template is="jrzpTemplate" data="{{...item}}" />
             </view>
 
@@ -67,7 +66,7 @@
       </view>
     </view>
   </swiper-item>
-  <!-- <swiper-item>
+  <swiper-item>
     <view class="jrzp-gc">
       <view class="jrzp-g-nr">
 
@@ -84,7 +83,7 @@
     </view>
   </swiper-item> -->
 
-  <!-- <swiper-item>
+   <swiper-item>
     <view class="jrzp-gc">
       <view class="jrzp-g-nr">
 
@@ -99,7 +98,7 @@
 
       </view>
     </view>
-  </swiper-item> -->
+  </swiper-item>
 </swiper>
 <!-- 直播间页面导航 -->
 <view class="jrzp-zbj">

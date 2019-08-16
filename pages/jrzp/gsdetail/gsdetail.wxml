@@ -1,17 +1,101 @@
 <!--pages/jrzp/gsdetail/gsdetail.wxml-->
 <view class="gscontainer">
   <view class="gsbanner">
-    <swiper indicator-dots="true" autoplay="true" interval="5000" duration="1000" style="height:350rpx;">
+    <swiper indicator-dots="true" autoplay="true" interval="5000" duration="1000" >
       <block wx:for="{{banner}}" wx:key="">
         <swiper-item>
-          <image src="{{item}}" class="swiper-image" bindtap="showGoods" mode="widthFit" style="width:100%;height:350rpx" />
+          <image src="{{item}}"  bindtap="showGoods" mode="top"  />
         </swiper-item>
       </block>
     </swiper>
   </view>
+                           <!-- 公司信息 -->
+<view class="gscontainer-auto">
+    <view class="gscontainer-list">
+      <view class="gscontainer-listmessage">
+        <view class="gscontainer-logoStyle">
+          <view class="gscontainer-logo">A</view>
+          <view class="gscontainer-contain">
+            <view class="gscontainer-containa">{{etprz.name}}</view>
+            
+          </view>
+        </view>
+        <view class="gscontainer-contain">
+          <view class="gscontainer-containa">招聘岗位：普工</view>
+          <view class="gscontainer-containd">平均月薪：{{etprz.salary}}</view>
+        </view>
+        <view class="gscontainer-address">地址:{{etprz.address}}</view>
+      </view>
+    </view>
 
+    <view class="gscontainer-list">
+      <view class="gscontainer-listmessage">
+        <view class="gscontainer-title">企业简介</view>
+        <view class="gscontainer-cStyle">
+          企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介 企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介
+        </view>
+      </view>
+    </view>
+  
+   <view class="gscontainer-list">
+      <view class="gscontainer-listwork">
+        <view class="gscontainer-work">岗位描述</view>
+        <!-- <view class="gscontainer-money">4000元</view> -->
+      </view>
+      <view class="gscontainer-cStyle">
+      {{etprz.requirement}}
+      </view>
+    </view>
+
+    <view class="gscontainer-list">
+      <view class="gscontainer-listmessage">
+        <view class="gscontainer-title">招聘负责</view>
+        <view class="gscontainer-cStyle">
+          <view>
+            <text>公司负责人：{{etprz.contactPeople}}</text>
+          </view>
+          <view  catchtap="makePhone">
+            联系方式：<text style="color:blue">{{etprz.contactPhone}}</text>
+          </view>
+          <view>
+            <text>面试地址： {{etprz.interviewAddress}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="gscontainer-list">
+      <view class="gscontainer-listmessage">
+        <view class="gscontainer-title">薪资结构</view>
+        <view class="gscontainer-cStyle">
+          <view>
+            <text>底薪3000元+交通补助150元+餐补200元+加班20元/小时</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="gscontainer-list">
+      <view class="gscontainer-listmessage">
+        <view class="gscontainer-title">入职奖金</view>
+        <view class="gscontainer-cStyle">
+          <view>
+            <text>入职满一周，额外奖励600元现金</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+
+  </view>
+</view>
+<view class="bottom-title">
+  <view style="color:blue;padding:20rpx 30rpx">温馨提示：</view>
+  <view style="font-size:26rpx;color:#666; margin:0 30rpx">本平台承诺该公司名下所有职位不向您收取费用，如有不实，请立即向我平台举报举报！
+  <view class="bottom-free"></view>
+  </view>
   <!-- 公司信息 -->
-  <text class="gstitle">{{etprz.name}}</text>
+  <!-- <text class="gstitle">{{etprz.name}}</text>
   <view class="gs-content">
     <view class="gs-content-t">
       <view class="gs-content-tl">招聘岗位：</view>
@@ -57,10 +141,11 @@
         </i-collapse-item>
       </i-collapse>
     </view>
-  </view>
+  </view> -->
   <!-- 底部链接 -->
-  <view class="gsbottom">
+  
+</view>
+<view class="gsbottom">
     <i-button catchtap="handlevideo" type="success" class="success-button">招聘直播</i-button>
     <i-button catchtap="handleface" type="warning" class="warning-button">面试报名</i-button>
   </view>
-</view>

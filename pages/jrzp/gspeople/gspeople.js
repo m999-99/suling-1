@@ -13,11 +13,38 @@ Page({
       birthData: '',
       eMail: '',
       phoneNumber: '',
-      job: '',
-      salary: '',
+      homeNow: '',
+      school: '',
       address: '',
-
+      phonePeople:''
     },
+  },
+  resumeSubmitStyle: function (e) {
+    var that = this;
+    console.log('form发生了submit事件，携带数据为：', e.detail.value)
+    var that = this;
+    var formData = e.detail.value;
+    if (e.detail.value.userName == '' || e.detail.value.userGender == '' || e.detail.value.phoneNumber == '' || e.detail.value.birthData == '' || e.detail.value.hignSchool == '' || e.detail.value.homeNow == '' || e.detail.value.address == '' || e.detail.value.peopleNumber == '' ) {
+      wx.showToast({
+        title: '请填写完整···',
+        icon: 'loading',
+      })
+    } else {
+      wx.request({
+        url: 'https:***/submit',//实际接口     
+        data: formData,
+        header: {
+          'Content-Type': 'application/json'
+        },
+        success: function (res) {
+          console.log(res.data)
+          wx.showtoast({
+            title: '提交成功'
+          })
+          
+        }
+      })
+    }
   },
 
   /**
@@ -28,8 +55,20 @@ Page({
       url: '../../jrzp/success/success',
     })
   },
+  bindleDateChange:function(e) {
+    // console.log(e.detail.value)
+    this.setData({
+      'baseInfo.birthData': e.detail.value
+    })
+  },
+  bindSchoolChange: function (e) {
+    console.log(e)
+    this.setData({
+      'baseInfo.school': e.detail.value
+    })
+  },
   onLoad: function (options) {
-    console.log(options.etprzid)
+    
   },
 
   /**

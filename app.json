@@ -10,15 +10,16 @@
     "pages/jrzp/jrzp-/jrzp",
     "pages/me/me",
     "pages/fwfw/fwfw",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/search/search-container/search-container"
     
   ],
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#062f8e",
     "navigationBarTitleText": "易职招聘",
-    "navigationBarTextStyle": "white",
-    "enablePullDownRefresh": true
+    "navigationBarTextStyle": "white"
+    
   },
   "debug":true,
   "permission": {
