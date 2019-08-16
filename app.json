@@ -10,15 +10,18 @@
     "pages/jrzp/jrzp-/jrzp",
     "pages/me/me",
     "pages/fwfw/fwfw",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/search/search-container/search-container"
     
   ],
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#062f8e",
+
     "navigationBarTitleText": "苏领",
     "navigationBarTextStyle": "white",
     "enablePullDownRefresh": true
+
   },
   "debug":true,
   "permission": {

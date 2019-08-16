@@ -1,34 +1,23 @@
 <!--pages/search/search.wxml-->
-<view>
-<view>
+<view class="searchContainer">
 2019/7/30公告信息
-<i-notice-bar icon="systemprompt" closable>
-    研二科技企业招聘信息
-</i-notice-bar>
-<i-notice-bar icon="systemprompt" closable>
-   三星电子企业招聘信息
-</i-notice-bar>
-<i-notice-bar icon="systemprompt" closable>
-    华为企业招聘信息
-</i-notice-bar>
-<i-notice-bar icon="systemprompt" closable>
-    小米企业招聘信息
-</i-notice-bar>
+<block wx:for="{{usesData30}}" wx:for-item="item" wx:key="key">
+  <view catchtap="goSearchContainer" data-etprzid="{{item.etprzid}}" class="a">
+    <i-notice-bar icon="systemprompt" >
+       {{item.name}}
+    </i-notice-bar>
+   </view>
+</block>
+</view>
 
-</view>
-<view>
+<view class="searchContainer">
 2019/7/31公告信息
-<i-notice-bar icon="systemprompt" closable background-color="#999">
-    研二科技企业招聘信息
-</i-notice-bar>
-<i-notice-bar icon="systemprompt" closable>
-   三星电子企业招聘信息
-</i-notice-bar>
-<i-notice-bar icon="systemprompt" closable>
-    华为企业招聘信息
-</i-notice-bar>
-<i-notice-bar icon="systemprompt" closable>
-    小米企业招聘信息
-</i-notice-bar>
+<block wx:for="{{usesData31}}" wx:for-item="item" wx:key="key">
+<view catchtap="goSearchContainer" data-etprzid="{{item.etprzid}}"class="a">
+    <i-notice-bar icon="systemprompt" >
+       {{item.name}}
+    </i-notice-bar>
+      </view>
+</block>
 </view>
-</view>
+

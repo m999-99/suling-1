@@ -13,7 +13,9 @@ App({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         wx.request({
+
           url: this.globalData.baseUrl+'/wxlogin?code=' + res.code,
+
           data: {},
           header: {
             'content-type': 'json'

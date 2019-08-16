@@ -27,17 +27,14 @@ Page({
 
     ],
     msgList: [{
-      url: "url",
-      title: "易职招聘小程序正式上线啦..."
+      "etprzid": 1,
+      "name": "研1电子"
     }, {
-      url: "url",
-      title: "苏州园区三星工厂大量招工..."
+        "etprzid": 2,
+        "name": "研2电子"
     }, {
-      url: "url",
-      title: "苏州园区大量招聘普工.."
-    }, {
-      url: "url",
-      title: "苏州园区大量招聘普工啦啦啦啦..."
+        "etprzid": 3,
+        "name": "研3电子"
     }
     ],
     item: {
@@ -181,7 +178,7 @@ Page({
       success: function (res2) {
         console.log("RES2.DATA:" + res2.data);
         wx.request({
-          url: 'https://192.168.1.123:8443/easyjob/upduser',
+          url: 'https://192.168.1.107:8443/easyjob/upduser',
           method: "POST",
           data: {
             openid: res2.data,

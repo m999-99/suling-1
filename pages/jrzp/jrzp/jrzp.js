@@ -10,6 +10,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    region: [ "江苏省","苏州市", "工业园区"],
     winWidth: 0,
     winHeight: 0,
     // tab切换
@@ -26,6 +27,9 @@ Page({
     wx.navigateTo({
     url: '../../jrzp/gsdetail/gsdetail?etprzid=' + event.currentTarget.dataset.etprzid
     })
+  },
+  changeRegin(e) {
+    this.setData({ region: e.detail.value });
   },
   goVideo: function () {
     wx.switchTab({
@@ -62,7 +66,7 @@ Page({
     //   useData:newsData.initData
     // })
     wx.request({
-  url: 'https://192.168.1.123:8443/easyjob/entprz/listentprz',
+  url: 'https://192.168.1.107:8443/easyjob/entprz/listentprz',
   method:'GET',
   success(res){
   

@@ -7,6 +7,6 @@
   "backgroundTextStyle": "dark",
   "navigationBarBackgroundColor": "#062f8e",
   "navigationBarTitleText": "创建简历",
-  "navigationBarTextStyle": "white",
-  "enablePullDownRefresh": true
+  "navigationBarTextStyle": "white"
+  
 }
