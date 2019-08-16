@@ -131,7 +131,7 @@ function updateAreaData( that, status, e){
         num++;
       }
     }
-    console.log(streets);
+  
     if (streets.length == 0) {
       streets[0] = { name: '' };
     }
@@ -165,7 +165,6 @@ function updateAreaData( that, status, e){
 
       assignmentData(that, that.data.item.show)
 
-      console.log(val);
       
       //回调
       //callBack(val);
@@ -189,6 +188,11 @@ function updateAreaData( that, status, e){
 
 //动画事件
 function animationEvents(that, moveY, show, duration) {
+  module.exports = {
+    updateAreaData: updateAreaData,
+    animationEvents: animationEvents
+  }
+
   console.log("moveY:" + moveY + "\nshow:" + show);
   that.animation = wx.createAnimation({
     transformOrigin: "50% 50%",
@@ -196,6 +200,7 @@ function animationEvents(that, moveY, show, duration) {
     timingFunction: "ease",
     delay: 0
   })
+  
   that.animation.translateY(moveY + 'vh').step()
   //赋值
   assignmentData(that,show)
@@ -215,6 +220,7 @@ function assignmentData(that, show) {
       value: value
     }
   })
+ 
 }
 
 module.exports = {
