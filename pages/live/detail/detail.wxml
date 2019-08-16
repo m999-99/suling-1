@@ -22,6 +22,10 @@
     mediaUrl="{{mediaUrl}}"
   ></talkfun-media-view>
   <!-- #聊天 -->
+  <view>
+  
+  </view>
+  <live-player mediaUrl=""></live-player>
   <h2>聊天模块</h2>
   <view class="mod-chat-list">
     <!-- 列表 -->

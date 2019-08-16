@@ -1,5 +1,6 @@
 
 var canIUseSession = true;
+
 const {
   $Message
 } = require('../../dist/base/index');
@@ -8,6 +9,7 @@ var model = require('../../model/model.js')
 
 var show = false;
 var item = {};
+var baseUrl = app.globalData.baseUrl;
 
 Page({
   data: {
@@ -178,7 +180,9 @@ Page({
       success: function (res2) {
         console.log("RES2.DATA:" + res2.data);
         wx.request({
-          url: 'https://192.168.1.107:8443/easyjob/upduser',
+
+          url: baseUrl+'/upduser',
+
           method: "POST",
           data: {
             openid: res2.data,

@@ -1,2 +1,4 @@
 <!--pages/me/me.wxml-->
 <text>pages/me/me.wxml</text>
+
+<button bindtap="submit">提交</button>
