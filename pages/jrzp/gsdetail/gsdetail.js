@@ -1,7 +1,7 @@
 // pages/jrzp/gsdetail/gsdetail.js
 //var newsData = require("../../data/newsdata.js");
 var app = getApp()
-
+var baseUrl=app.globalData.baseUrl;
 Page({
 
   /**
@@ -42,7 +42,8 @@ Page({
    // that.setData(useData[options.etprzid])
     var useData = app.globalData;
     wx.request({
-      url: "https://192.168.1.107:8443/easyjob/entprz/getentprzbyid",
+
+      url: baseUrl+"/entprz/getentprzbyid",
       data: { "etprzid": options.etprzid },
       method: 'GET',
       success: function (res) {

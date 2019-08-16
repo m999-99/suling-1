@@ -64,7 +64,8 @@ App({
     userInfo: null,
     isAuth: true,
     useData:[],
-    baseUrl:"http://je2d96.natappfree.cc/easyjob"
+   baseUrl:" http://f2gjb5.natappfree.cc/easyjob",
+   base1:""
   },
 
 })

@@ -2,7 +2,7 @@
 //引入data文件夹中的js数据
 var app = getApp()
  //var newsData=require("../../data/newsdata.js");
-
+var baseUrl=app.globalData.baseUrl;
 
 Page({
 
@@ -66,7 +66,9 @@ Page({
     //   useData:newsData.initData
     // })
     wx.request({
-  url: 'https://192.168.1.107:8443/easyjob/entprz/listentprz',
+
+      url: baseUrl+'/entprz/listentprz',
+
   method:'GET',
   success(res){
   

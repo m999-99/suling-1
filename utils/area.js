@@ -1,7 +1,8 @@
-
+const app = getApp();
 var str = [];
+var baseUrl = app.globalData.baseUrl;
 wx.request({
-  url: 'https://192.168.1.107:8443/easyjob/getAddressData',
+  url: baseUrl+'/getAddressData',
   success(res) {
     if (res.data) {
 
