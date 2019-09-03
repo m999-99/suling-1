@@ -2,7 +2,7 @@
 .gscontainer{
  display: flex;
   flex-direction: column;
-  background-color: #fff;
+  background-color: #f1f1f1;
 }
 .gsbanner{
   width: 100%;
@@ -14,30 +14,34 @@
    }
 
         /* 公司信息 */
- .gscontainer-auto {
-  width: 96%;
+ .gscontainer-all {
+  width: 94%;
   height: auto;
   margin: 0 auto;
   border-radius: 20rpx;
-  background-color: #ededed;
-  margin-top: 20rpx;
+  background-color: #fff;
+  box-shadow: 0 0 12rpx 4rpx #e1e1e1;
+  margin-top: 30rpx;
  }
 
 .gscontainer-list {
   width: 94%;
   height: auto;
   margin: 0 auto;
-  border-radius:10rpx;
+  border-radius:2rpx;
   background-color: #fff;
   margin-top: 10rpx;
-  /* border-bottom: 1rpx solid #999; */
-  /* box-shadow: 0 2rpx 8rpx 1rpx skyblue; */
+  border-bottom: 2rpx solid #ededed;
+  /* box-shadow: 0 0rpx 2rpx 1rpx skyblue; */
   padding:15rpx;
 }
 
-.scontainer-title {
+.gscontainer-title {
   margin-top: 10rpx;
-  font-weight: bolder;
+  font-weight: bold;
+  font-family: "华文黑体";
+  padding: 0 0 20rpx 20rpx;
+  color:#333
 }
 
 .gscontainer-logoStyle {
@@ -47,45 +51,88 @@
 }
 
 .gscontainer-logo {
-  width: 50rpx;
-  height: 50rpx;
-  line-height: 50rpx;
-  border-radius: 50%;
-  background-color: red;
-  text-align: center;
-  color: white;
  
+  vertical-align: middle;
+ 
+ 
+}
+.gscontainer-logos{
+ width: 100rpx;
+  height:80rpx;
+  line-height: 80rpx;
+
+   vertical-align: middle;
 }
 
 .gscontainer-contain {
-  width: 80%;
-  height: 100rpx;
+  height: 100rpx; 
 }
-
+.gscontainer-people{
+  display: flex;
+  flex-direction:column;
+}
+.gscontainer-text{
+  font-size: 24rpx;
+  color: #999;
+  padding:12rpx 18rpx 
+}
 .gscontainer-containa {
   color: #333;
+  margin-left: 20rpx;
+  font-family: "微软雅黑";
+  font-weight: 600;
+  font-size: 36rpx
+  
 }
 
 .gscontainer-containb {
   color: #999;
   font-size: 26rpx;
 }
+.gscontainer-Job{
+  font-size: 36rpx;
+  font-family: "微软雅黑";
+ 
+  padding: 12rpx 100rpx;
+  color: #999
+  
+}
 
 .gscontainer-containd {
   color: red;
-  font-weight: bold;
-  margin-top: 10rpx;
+  font-size: 38rpx;
+  font-weight: 800;
+   font-family: "微软雅黑";
+  padding: 60rpx 12rpx 14rpx 30rpx
+}
+.gscontainer-month{
+  font-weight: 600;
+  font-size: 30rpx;
+  color: pink
 }
 
 .gscontainer-address {
-  font-size: 30rpx;
-  color: #999;
-  margin-top: 20rpx;
+  font-size: 26rpx;
+  color: rgb(189, 187, 187);
+  padding: 10rpx 30rpx
+  
 }
-
+.gscontainer-address text {
+  padding-right: 20rpx;
+  color: #999
+  
+}
 .gscontainer-cStyle {
   color: #999;
   font-size: 26rpx;
+  text-indent:60rpx;
+  line-height:50rpx
+}
+.gscontainer-dStyle{
+  color: #999;
+  font-size: 26rpx;
+  text-indent:20rpx;
+  line-height:50rpx
 }
 
 .gscontainer-listwork {
@@ -103,17 +150,27 @@
   font-size: 44rpx;
   color: red
 } */
-
+.Warm-prompt{
+  color:#062f8e;
+  padding:20rpx 30rpx
+}
+.Platform-Reporting{
+  font-size:26rpx;
+  color:#666; 
+  margin:0 20rpx;
+  line-height:40rpx
+}
 .bottom-title {
   width:100%;
   margin: 2rpx auto;
-  background-color: #fff;
+  background-color: #ededed;
 }
 .bottom-free{
   width: 100%;
   height: 140rpx;
-  background-color: #fff
+  background-color: #ededed
 }
+
      /* 底部导航 */
      .gsbottom{
        display: flex;
@@ -127,11 +184,13 @@
      }
      .success-button{
        width: 30%;
-       margin: 0 auto
+       margin: 0 auto;
+       
        
      }
      .warning-button{
        width: 60%;
-       margin: 0 auto
+       margin: 0 auto;
+      
        
      }

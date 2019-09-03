@@ -1,7 +1,7 @@
 <!--pages/jrzp/gsdetail/gsdetail.wxml-->
 <view class="gscontainer">
   <view class="gsbanner">
-    <swiper indicator-dots="true" autoplay="true" interval="5000" duration="1000" >
+    <swiper indicator-dots="true" autoplay="true" circular indicator-active-color="#062f8e" indicator-color="#f1f1f1" interval="5000" duration="1000" >
       <block wx:for="{{banner}}" wx:key="">
         <swiper-item>
           <image src="{{item}}"  bindtap="showGoods" mode="top"  />
@@ -10,21 +10,21 @@
     </swiper>
   </view>
                            <!-- 公司信息 -->
-<view class="gscontainer-auto">
+<view class="gscontainer-all">
     <view class="gscontainer-list">
       <view class="gscontainer-listmessage">
         <view class="gscontainer-logoStyle">
-          <view class="gscontainer-logo">A</view>
-          <view class="gscontainer-contain">
+          <view class="gscontainer-logo"><image class="gscontainer-logos" src="/images/yizhi/index/logo.jpg"></image></view>
+          <view class="gscontainer-contain gscontainer-people">
             <view class="gscontainer-containa">{{etprz.name}}</view>
-            
+            <view class="gscontainer-text"><text>99-500\t/\t私有企业\t/\t电子制造</text></view>
           </view>
         </view>
-        <view class="gscontainer-contain">
-          <view class="gscontainer-containa">招聘岗位：普工</view>
-          <view class="gscontainer-containd">平均月薪：{{etprz.salary}}</view>
-        </view>
-        <view class="gscontainer-address">地址:{{etprz.address}}</view>
+       
+          <!-- <view class="gscontainer-Job">招聘岗位：普工</view> -->
+          <view class="gscontainer-containd">{{etprz.salary}}-6000<text class="gscontainer-month">\t元/月</text></view>
+       
+        <view class="gscontainer-address"><text>地址:</text>{{etprz.address}}</view>
       </view>
     </view>
 
@@ -32,14 +32,14 @@
       <view class="gscontainer-listmessage">
         <view class="gscontainer-title">企业简介</view>
         <view class="gscontainer-cStyle">
-          企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介 企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介
+         无锡红光标牌有限公司是一家集研发、生产、销售和服务于一体的专业标牌生产厂家。注册资金500万人民币。主要生产塑料基材、软塑透明树脂、金属、模内复合等标牌产品，洗衣机顶盖板总成，平衡板，以及塑印、彩印、顶盖板、吸音垫等产品。公司位于长江三角洲经济快速增长、风景秀丽的太湖之畔——无锡。 公司自1984年成立至今，已经过了3次跨越式的发展。2004年至今公司投入5000多万元资金建设新的生产基地，目前已竣工并投入生产，占地面积达40000m2，厂房面积近15000m2。公司2004年的年产值达4350多万元，并且每年以平均30%的速度快速增长。
         </view>
       </view>
     </view>
   
    <view class="gscontainer-list">
       <view class="gscontainer-listwork">
-        <view class="gscontainer-work">岗位描述</view>
+        <view class="gscontainer-title">岗位描述</view>
         <!-- <view class="gscontainer-money">4000元</view> -->
       </view>
       <view class="gscontainer-cStyle">
@@ -50,12 +50,12 @@
     <view class="gscontainer-list">
       <view class="gscontainer-listmessage">
         <view class="gscontainer-title">招聘负责</view>
-        <view class="gscontainer-cStyle">
+        <view class="gscontainer-dStyle">
           <view>
             <text>公司负责人：{{etprz.contactPeople}}</text>
           </view>
           <view  catchtap="makePhone">
-            联系方式：<text style="color:blue">{{etprz.contactPhone}}</text>
+            联系方式：<text style="color:#062f8e;font-size:32rpx">{{etprz.contactPhone}}</text>
           </view>
           <view>
             <text>面试地址： {{etprz.interviewAddress}}</text>
@@ -90,8 +90,8 @@
   </view>
 </view>
 <view class="bottom-title">
-  <view style="color:blue;padding:20rpx 30rpx">温馨提示：</view>
-  <view style="font-size:26rpx;color:#666; margin:0 30rpx">本平台承诺该公司名下所有职位不向您收取费用，如有不实，请立即向我平台举报举报！
+  <view class="Warm-prompt">温馨提示：</view>
+  <view class="Platform-Reporting" >本平台承诺该公司名下所有职位不向您收取费用，如有不实，请立即向我平台举报举报！
   <view class="bottom-free"></view>
   </view>
   <!-- 公司信息 -->
@@ -146,6 +146,6 @@
   
 </view>
 <view class="gsbottom">
-    <i-button catchtap="handlevideo" type="success" class="success-button">招聘直播</i-button>
-    <i-button catchtap="handleface" type="warning" class="warning-button">面试报名</i-button>
+    <i-button catchtap="handlevideo" type="error" class="success-button">招聘直播</i-button>
+    <i-button catchtap="handleface" type="primary" class="warning-button">面试报名</i-button>
   </view>

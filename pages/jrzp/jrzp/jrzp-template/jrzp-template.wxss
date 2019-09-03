@@ -16,7 +16,7 @@
   flex-wrap: wrap;   
    /* 一行填满后会自动换行 */
   padding: 0;
-  justify-content: center
+  /* justify-content: center */
  
 }
 .jrzp-gc .jrzp-g-nr ul li{

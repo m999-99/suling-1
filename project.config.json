@@ -10,11 +10,11 @@
 		"minified": true,
 		"newFeature": true,
 		"coverView": true,
+		"nodeModules": true,
 		"autoAudits": false,
 		"checkInvalidKey": true,
 		"checkSiteMap": true,
 		"uploadWithSourceMap": true,
-		"nodeModules": true,
 		"babelSetting": {
 			"ignore": [],
 			"disablePlugins": [],

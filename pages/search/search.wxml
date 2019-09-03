@@ -1,9 +1,9 @@
 <!--pages/search/search.wxml-->
 <view class="searchContainer">
-2019/7/30公告信息
+<view class="searchTitle">2019/7/30公告信息</view>
 <block wx:for="{{usesData30}}" wx:for-item="item" wx:key="key">
   <view catchtap="goSearchContainer" data-etprzid="{{item.etprzid}}" class="a">
-    <i-notice-bar icon="systemprompt" >
+    <i-notice-bar icon="systemprompt" i-class="notice-bar" color="red" background-color="#333" >
        {{item.name}}
     </i-notice-bar>
    </view>
@@ -11,10 +11,10 @@
 </view>
 
 <view class="searchContainer">
-2019/7/31公告信息
+<view class="searchTitle">2019/7/31公告信息</view>
 <block wx:for="{{usesData31}}" wx:for-item="item" wx:key="key">
 <view catchtap="goSearchContainer" data-etprzid="{{item.etprzid}}"class="a">
-    <i-notice-bar icon="systemprompt" >
+    <i-notice-bar icon="systemprompt" color="red" >
        {{item.name}}
     </i-notice-bar>
       </view>
